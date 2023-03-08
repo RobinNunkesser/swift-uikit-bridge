@@ -13,19 +13,16 @@ let doStuffMessageHandler = "doStuffMessageHandler"
 class ViewController: UIViewController {
 
     @IBOutlet weak var webViewContainer: UIView!
-    var webView: WKWebView
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
+    lazy var webView: WKWebView = {
+        let configuration = WKWebViewConfiguration()
+        configuration.userContentController.add(self, name: doStuffMessageHandler)
+        return WKWebView(frame: .zero,configuration: configuration)
+    }()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let configuration = WKWebViewConfiguration()
-        configuration.userContentController.add(self, name: doStuffMessageHandler)
-        webView = WKWebView(frame: .zero,configuration: configuration)
-
         webView.translatesAutoresizingMaskIntoConstraints = false
         webViewContainer.addSubview(webView)
         

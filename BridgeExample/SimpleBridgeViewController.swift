@@ -10,7 +10,7 @@ import WebKit
 
 let doStuffMessageHandler = "doStuffMessageHandler"
 
-class ViewController: UIViewController {
+class SimpleBridgeViewController: UIViewController {
 
     @IBOutlet weak var webViewContainer: UIView!
     
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController : WKScriptMessageHandler {
+extension SimpleBridgeViewController : WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == doStuffMessageHandler {
             guard let dict = message.body as? [String: AnyObject],

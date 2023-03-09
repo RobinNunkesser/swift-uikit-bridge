@@ -13,7 +13,6 @@ class InjectionViewController: UIViewController {
     @IBOutlet weak var webViewContainer: UIView!
 
     var webView : WKWebView?
-    let MessageHandlerName = "namespaceWithinTheInjectedJSCode"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +27,6 @@ class InjectionViewController: UIViewController {
         let userContentController = WKUserContentController()
         userContentController.addUserScript(userScript)
         
-        userContentController.addScriptMessageHandler(self, contentWorld: .page, name: MessageHandlerName)
-
         config.userContentController = userContentController
         
         webView = WKWebView(frame: .zero, configuration: config)
@@ -49,21 +46,32 @@ class InjectionViewController: UIViewController {
         }
     }
 
+    @IBAction func evaluateJS(_ sender: Any) {
+        evaluateJavaScript(param1: "One", param2: "Two")
+    }
+    
+    func evaluateJavaScript(param1: String, param2: String) {
+        
+        let data: [String: String] = [
+            "param1": "\(param1)",
+            "param2": "\(param2)"
+        ]
+
+        guard let json = try? JSONEncoder().encode(data),
+              let jsonString = String(data: json, encoding: .utf8) else {
+            return
+        }
+        
+        let javascript = "showParams('\(jsonString)')"        
+        webView?.evaluateJavaScript(javascript, completionHandler: nil)
+        
+    }
+    
     // need to deinit and remove webview stuff
     deinit {
         if let webView = webView{
             let ucc = webView.configuration.userContentController
             ucc.removeAllUserScripts()
-            ucc.removeScriptMessageHandler(forName:MessageHandlerName)
-        }
-    }
-}
-
-extension InjectionViewController: WKScriptMessageHandlerWithReply {
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage, replyHandler: @escaping (Any?, String?) -> Void) {
-        if message.name == MessageHandlerName, let messageBody = message.body as? String {
-            print(messageBody)
-            replyHandler( 2.2, nil ) // first var is success return val, second is err string if error
         }
     }
 }

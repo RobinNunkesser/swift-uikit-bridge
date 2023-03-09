@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="797.70992366412213" y="3.5211267605633805"/>
         </scene>
-        <!--Injection-->
+        <!--Injection View Controller-->
         <scene sceneID="Fth-Kn-vvU">
             <objects>
                 <viewController id="Dv1-As-KZy" customClass="InjectionViewController" customModule="BridgeExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Xr-qF8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -61,14 +61,20 @@
                             <constraint firstItem="6cy-Xr-qF8" firstAttribute="top" secondItem="niy-hR-sRl" secondAttribute="top" id="lXt-Mf-ldF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Injection" id="0Ss-dl-7Aq"/>
+                    <navigationItem key="navigationItem" id="Mqy-gJ-JKZ">
+                        <barButtonItem key="rightBarButtonItem" title="Eval JS" id="rDb-ij-lH7">
+                            <connections>
+                                <action selector="evaluateJS:" destination="Dv1-As-KZy" id="spV-ax-VW3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webViewContainer" destination="6cy-Xr-qF8" id="66q-an-TBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bi-65-NV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="806"/>
+            <point key="canvasLocation" x="619.08396946564881" y="805.63380281690149"/>
         </scene>
         <!--Bridge-->
         <scene sceneID="BGH-2G-mQQ">
@@ -99,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3S-Si-mdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="732"/>
+            <point key="canvasLocation" x="1724.4274809160304" y="731.69014084507046"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2TP-4N-trg">
@@ -113,12 +119,31 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aJC-lu-jr2"/>
                         <segue destination="UIw-Mb-6if" kind="relationship" relationship="viewControllers" id="9O9-1U-O3F"/>
-                        <segue destination="Dv1-As-KZy" kind="relationship" relationship="viewControllers" id="Idx-jr-Aad"/>
+                        <segue destination="2RL-OU-hZD" kind="relationship" relationship="viewControllers" id="Idx-jr-Aad"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qM-E8-hm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-129.00763358778624" y="3.5211267605633805"/>
+        </scene>
+        <!--Injection-->
+        <scene sceneID="fRg-mq-jcJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2RL-OU-hZD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Injection" id="0Ss-dl-7Aq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u7j-Lt-fPe">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dv1-As-KZy" kind="relationship" relationship="rootViewController" id="kQ7-tc-lZr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MR5-nd-kGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307.63358778625951" y="805.63380281690149"/>
         </scene>
     </scenes>
     <resources>

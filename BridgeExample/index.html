@@ -1,13 +1,11 @@
 <html>
-    <head>
-        <title> Bridge Example </title>
-    </head>
+    <meta name="viewport" content="width=device-width" />
     <body>
         <h1> Hello World! </h1>
         <p id="paragraph">Lorem Ipsum</p>
         
         <script>            
-            var response = window.webkit.messageHandlers.doStuffMessageHandler.postMessage({param1: "stuff", param2: 1000});
+            var response = window.webkit.messageHandlers.simpleMessageHandler.postMessage({param1: "stuff", param2: 1000});
         </script>
         
     </body>

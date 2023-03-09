@@ -8,15 +8,17 @@
 import UIKit
 import WebKit
 
-let doStuffMessageHandler = "doStuffMessageHandler"
-
 class SimpleBridgeViewController: UIViewController {
 
     @IBOutlet weak var webViewContainer: UIView!
     
+    let MessageHandlerName = "simpleMessageHandler"
+    
     lazy var webView: WKWebView = {
         let configuration = WKWebViewConfiguration()
-        configuration.userContentController.add(self, name: doStuffMessageHandler)
+        let userContentController = WKUserContentController()
+        userContentController.add(self, name: MessageHandlerName)
+        configuration.userContentController = userContentController
         return WKWebView(frame: .zero,configuration: configuration)
     }()
         
@@ -41,7 +43,7 @@ class SimpleBridgeViewController: UIViewController {
 
 extension SimpleBridgeViewController : WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == doStuffMessageHandler {
+        if message.name == MessageHandlerName {
             guard let dict = message.body as? [String: AnyObject],
                   let param1 = dict["param1"] as? String,
                   let param2 = dict["param2"] as? Int

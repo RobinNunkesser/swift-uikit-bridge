@@ -1,0 +1,31 @@
+<html>
+    <meta name="viewport" content="width=device-width" />
+    <body>
+        <h1 id="valToWrite">Hello</h1>
+        <button onclick="sampleMethodTheHTMLCanCall( 'inputInfo', handleInfoFromApp, handleError )">Load Info from App</button>
+        <script>
+            function sampleMethodTheHTMLCanCall( inputInfo, successFunc, errorFunc ) {
+                
+                var promise = window.webkit.messageHandlers.replyMessageHandler.postMessage( inputInfo );
+                
+                promise.then(
+                  function(result) {
+                    console.log(result); // "Stuff worked!"
+                    successFunc( result )
+                  },
+                  function(err) {
+                    console.log(err); // Error: "It broke"
+                    errorFunc( err )
+                  });
+            }
+
+            
+            function handleInfoFromApp( fromApp ){
+                document.getElementById("valToWrite").innerHTML = fromApp;
+            }
+            function handleError( err ){
+            
+            }
+        </script>
+    </body>
+</html>

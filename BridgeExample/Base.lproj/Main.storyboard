@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="quy-aV-GE3">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -7,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Simple Bridge View Controller-->
+        <!--Simple Bridge-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SimpleBridgeViewController" customModule="BridgeExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-dj-kVo">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -29,13 +30,63 @@
                             <constraint firstItem="yF5-dj-kVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="emm-Av-7D4"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Simple Bridge" id="2pq-Eq-otk"/>
                     <connections>
                         <outlet property="webViewContainer" destination="yF5-dj-kVo" id="rMa-UV-uni"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="4"/>
+            <point key="canvasLocation" x="797.70992366412213" y="3.5211267605633805"/>
+        </scene>
+        <!--Bridge-->
+        <scene sceneID="BGH-2G-mQQ">
+            <objects>
+                <viewController id="UIw-Mb-6if" customClass="BridgeViewController" customModule="BridgeExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FZ2-iy-EmX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yG-7c-fdJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mb8-Ch-n3l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mb8-Ch-n3l" firstAttribute="trailing" secondItem="5yG-7c-fdJ" secondAttribute="trailing" id="5qG-BM-MEd"/>
+                            <constraint firstItem="5yG-7c-fdJ" firstAttribute="top" secondItem="mb8-Ch-n3l" secondAttribute="top" id="gBN-8J-2oT"/>
+                            <constraint firstItem="5yG-7c-fdJ" firstAttribute="leading" secondItem="mb8-Ch-n3l" secondAttribute="leading" id="ngA-Xy-5Et"/>
+                            <constraint firstItem="mb8-Ch-n3l" firstAttribute="bottom" secondItem="5yG-7c-fdJ" secondAttribute="bottom" id="q1R-Rt-AWq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bridge" id="tLA-2T-cnE"/>
+                    <connections>
+                        <outlet property="webViewContainer" destination="5yG-7c-fdJ" id="Vbz-YM-TiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3S-Si-mdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="732"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2TP-4N-trg">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="quy-aV-GE3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YV7-c0-4e1">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aJC-lu-jr2"/>
+                        <segue destination="UIw-Mb-6if" kind="relationship" relationship="viewControllers" id="9O9-1U-O3F"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qM-E8-hm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129.00763358778624" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

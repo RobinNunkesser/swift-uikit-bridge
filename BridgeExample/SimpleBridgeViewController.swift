@@ -33,7 +33,7 @@ class SimpleBridgeViewController: UIViewController {
             webView.heightAnchor.constraint(equalTo: webViewContainer.heightAnchor)
         ])
         
-        if let url = Bundle.main.url(forResource: "index", withExtension: "html") {
+        if let url = Bundle.main.url(forResource: "simplePage", withExtension: "html") {
             webView.load(URLRequest(url: url))
         }
     }

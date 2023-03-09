@@ -13,9 +13,12 @@
 		6F2C728729B8BDF100D19C6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F2C728529B8BDF100D19C6B /* Main.storyboard */; };
 		6F2C728929B8BDF400D19C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2C728829B8BDF400D19C6B /* Assets.xcassets */; };
 		6F2C728C29B8BDF400D19C6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F2C728A29B8BDF400D19C6B /* LaunchScreen.storyboard */; };
-		6F466CD829B8D3CE0046942F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F466CD729B8D2EF0046942F /* index.html */; };
+		6F466CD829B8D3CE0046942F /* simplePage.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F466CD729B8D2EF0046942F /* simplePage.html */; };
 		6F7E6FF229B9C38E00F08874 /* BridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E6FF129B9C38E00F08874 /* BridgeViewController.swift */; };
-		6F7E6FF629B9C57300F08874 /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E6FF429B9C56600F08874 /* page.html */; };
+		6F7E6FF629B9C57300F08874 /* bridgePage.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E6FF429B9C56600F08874 /* bridgePage.html */; };
+		6F7E6FF829B9E2D200F08874 /* InjectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E6FF729B9E2D200F08874 /* InjectionViewController.swift */; };
+		6F7E6FFA29B9E3BC00F08874 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E6FF929B9E3B800F08874 /* script.js */; };
+		6F7E6FFC29B9E4A600F08874 /* injectionPage.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E6FFB29B9E4A400F08874 /* injectionPage.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +30,12 @@
 		6F2C728829B8BDF400D19C6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F2C728B29B8BDF400D19C6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F2C728D29B8BDF400D19C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F466CD729B8D2EF0046942F /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		6F466CD729B8D2EF0046942F /* simplePage.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = simplePage.html; sourceTree = "<group>"; };
 		6F7E6FF129B9C38E00F08874 /* BridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeViewController.swift; sourceTree = "<group>"; };
-		6F7E6FF429B9C56600F08874 /* page.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = page.html; sourceTree = "<group>"; };
+		6F7E6FF429B9C56600F08874 /* bridgePage.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = bridgePage.html; sourceTree = "<group>"; };
+		6F7E6FF729B9E2D200F08874 /* InjectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionViewController.swift; sourceTree = "<group>"; };
+		6F7E6FF929B9E3B800F08874 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		6F7E6FFB29B9E4A400F08874 /* injectionPage.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = injectionPage.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +75,12 @@
 				6F2C728829B8BDF400D19C6B /* Assets.xcassets */,
 				6F2C728A29B8BDF400D19C6B /* LaunchScreen.storyboard */,
 				6F2C728D29B8BDF400D19C6B /* Info.plist */,
-				6F466CD729B8D2EF0046942F /* index.html */,
+				6F466CD729B8D2EF0046942F /* simplePage.html */,
 				6F7E6FF129B9C38E00F08874 /* BridgeViewController.swift */,
-				6F7E6FF429B9C56600F08874 /* page.html */,
+				6F7E6FF429B9C56600F08874 /* bridgePage.html */,
+				6F7E6FF729B9E2D200F08874 /* InjectionViewController.swift */,
+				6F7E6FF929B9E3B800F08874 /* script.js */,
+				6F7E6FFB29B9E4A400F08874 /* injectionPage.html */,
 			);
 			path = BridgeExample;
 			sourceTree = "<group>";
@@ -135,10 +144,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F2C728C29B8BDF400D19C6B /* LaunchScreen.storyboard in Resources */,
-				6F466CD829B8D3CE0046942F /* index.html in Resources */,
+				6F7E6FFA29B9E3BC00F08874 /* script.js in Resources */,
+				6F466CD829B8D3CE0046942F /* simplePage.html in Resources */,
 				6F2C728929B8BDF400D19C6B /* Assets.xcassets in Resources */,
 				6F2C728729B8BDF100D19C6B /* Main.storyboard in Resources */,
-				6F7E6FF629B9C57300F08874 /* page.html in Resources */,
+				6F7E6FF629B9C57300F08874 /* bridgePage.html in Resources */,
+				6F7E6FFC29B9E4A600F08874 /* injectionPage.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F2C728429B8BDF100D19C6B /* SimpleBridgeViewController.swift in Sources */,
+				6F7E6FF829B9E2D200F08874 /* InjectionViewController.swift in Sources */,
 				6F7E6FF229B9C38E00F08874 /* BridgeViewController.swift in Sources */,
 				6F2C728029B8BDF100D19C6B /* AppDelegate.swift in Sources */,
 				6F2C728229B8BDF100D19C6B /* SceneDelegate.swift in Sources */,

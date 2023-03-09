@@ -39,6 +39,37 @@
             </objects>
             <point key="canvasLocation" x="797.70992366412213" y="3.5211267605633805"/>
         </scene>
+        <!--Injection-->
+        <scene sceneID="Fth-Kn-vvU">
+            <objects>
+                <viewController id="Dv1-As-KZy" customClass="InjectionViewController" customModule="BridgeExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mQX-vU-Ozh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Xr-qF8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="niy-hR-sRl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6cy-Xr-qF8" firstAttribute="leading" secondItem="niy-hR-sRl" secondAttribute="leading" id="Xjl-vN-1Iq"/>
+                            <constraint firstItem="niy-hR-sRl" firstAttribute="bottom" secondItem="6cy-Xr-qF8" secondAttribute="bottom" id="dIE-ju-OrV"/>
+                            <constraint firstItem="niy-hR-sRl" firstAttribute="trailing" secondItem="6cy-Xr-qF8" secondAttribute="trailing" id="j0a-dL-r31"/>
+                            <constraint firstItem="6cy-Xr-qF8" firstAttribute="top" secondItem="niy-hR-sRl" secondAttribute="top" id="lXt-Mf-ldF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Injection" id="0Ss-dl-7Aq"/>
+                    <connections>
+                        <outlet property="webViewContainer" destination="6cy-Xr-qF8" id="66q-an-TBb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bi-65-NV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307" y="806"/>
+        </scene>
         <!--Bridge-->
         <scene sceneID="BGH-2G-mQQ">
             <objects>
@@ -82,6 +113,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aJC-lu-jr2"/>
                         <segue destination="UIw-Mb-6if" kind="relationship" relationship="viewControllers" id="9O9-1U-O3F"/>
+                        <segue destination="Dv1-As-KZy" kind="relationship" relationship="viewControllers" id="Idx-jr-Aad"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qM-E8-hm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

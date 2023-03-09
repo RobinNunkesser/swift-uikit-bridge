@@ -33,7 +33,7 @@ class BridgeViewController: UIViewController {
             webView.heightAnchor.constraint(equalTo: webViewContainer.heightAnchor)
         ])
         
-        if let url = Bundle.main.url(forResource: "page", withExtension: "html") {
+        if let url = Bundle.main.url(forResource: "bridgePage", withExtension: "html") {
             webView.load(URLRequest(url: url))
         }
     }

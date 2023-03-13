@@ -113,6 +113,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="quy-aV-GE3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YV7-c0-4e1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -120,11 +121,43 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aJC-lu-jr2"/>
                         <segue destination="UIw-Mb-6if" kind="relationship" relationship="viewControllers" id="9O9-1U-O3F"/>
                         <segue destination="2RL-OU-hZD" kind="relationship" relationship="viewControllers" id="Idx-jr-Aad"/>
+                        <segue destination="bdJ-Iy-c6X" kind="relationship" relationship="viewControllers" id="RzN-0C-45X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qM-E8-hm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129.00763358778624" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-439" y="-18"/>
+        </scene>
+        <!--Nav Delegate-->
+        <scene sceneID="zQi-rD-xYP">
+            <objects>
+                <viewController id="bdJ-Iy-c6X" customClass="NavDelegateViewController" customModule="BridgeExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EAh-pl-p78">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guZ-Mn-EKf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MpG-v8-ct8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="guZ-Mn-EKf" firstAttribute="leading" secondItem="MpG-v8-ct8" secondAttribute="leading" id="bPf-UI-ZPM"/>
+                            <constraint firstItem="guZ-Mn-EKf" firstAttribute="top" secondItem="MpG-v8-ct8" secondAttribute="top" id="p9v-B5-ASl"/>
+                            <constraint firstItem="MpG-v8-ct8" firstAttribute="bottom" secondItem="guZ-Mn-EKf" secondAttribute="bottom" id="rzm-rg-mCW"/>
+                            <constraint firstItem="MpG-v8-ct8" firstAttribute="trailing" secondItem="guZ-Mn-EKf" secondAttribute="trailing" id="uoR-Fw-rFy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Nav Delegate" id="6ke-xE-Vq0"/>
+                    <connections>
+                        <outlet property="webViewContainer" destination="guZ-Mn-EKf" id="ow3-3v-55c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wC4-KO-YbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1337" y="820"/>
         </scene>
         <!--Injection-->
         <scene sceneID="fRg-mq-jcJ">
